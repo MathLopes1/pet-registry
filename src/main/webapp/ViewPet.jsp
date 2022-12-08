@@ -37,6 +37,6 @@
 		</c:forEach>
 	</table>
 	<br>
-	<a href="#">Incluir</a>
+	<a href="ViewAddPetForm.jsp">Incluir</a>
 </body>
 </html>
