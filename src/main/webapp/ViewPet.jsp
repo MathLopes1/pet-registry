@@ -32,7 +32,7 @@
 				<td>${pet.getRaca()}</td>
 				<td>${pet.getDono()}</td>
 				<td><a href="ViewEditForm.jsp?id=${pet.getId()}">Editar</a></td>
-				<td><a href="#">Excluir</a></td>				
+				<td><a href="DeletePet.jsp?id=${pet.getId()}">Excluir</a></td>				
 			</tr>
 		</c:forEach>
 	</table>

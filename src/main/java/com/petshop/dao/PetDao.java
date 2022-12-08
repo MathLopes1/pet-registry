@@ -121,4 +121,20 @@ public class PetDao {
 		
 		return pet;
 	}
+	
+	public static int deleteById(Pet pet) {
+		int status = 0;
+		
+		try {
+			Connection connect = getConnection();
+			PreparedStatement ps = (PreparedStatement) connect.prepareStatement("DELETE FROM tb_pet WHERE id=?");
+			ps.setLong(1, pet.getId());
+			status = ps.executeUpdate();
+			
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		return status;
+	}
 }
