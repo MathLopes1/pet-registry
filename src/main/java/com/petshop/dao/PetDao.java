@@ -25,6 +25,28 @@ public class PetDao {
 		return connect;
 	}
 	
+	public static int create(Pet newPet) {
+		int status = 0;
+		
+		try {
+			Connection connect = getConnection();
+			PreparedStatement ps = (PreparedStatement) connect
+					.prepareStatement("INSERT INTO tb_pet (nome, raca, especie, dono)"
+							+ "VALUES (?,?,?,?)");
+			
+			ps.setString(1, newPet.getNome());
+			ps.setString(2, newPet.getRaca());
+			ps.setString(3, newPet.getEspecie());
+			ps.setString(4, newPet.getDono());
+			status = ps.executeUpdate();
+			
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		return status;
+	}
+	
 	public static List<Pet> getAllPets() {
 		List<Pet> list = new ArrayList<Pet>();
 		
