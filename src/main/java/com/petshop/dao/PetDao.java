@@ -28,6 +28,22 @@ public class PetDao {
 	public static int create(Pet newPet) {
 		int status = 0;
 		
+		if(newPet.getNome() == null) {
+			return 0;
+		}
+		
+		if(newPet.getRaca() == null) {
+			return 0;
+		}
+		
+		if(newPet.getDono() == null) {
+			return 0;
+		}
+		
+		if(newPet.getEspecie() == null) {
+			return 0;
+		}
+		
 		try {
 			Connection connect = getConnection();
 			PreparedStatement ps = (PreparedStatement) connect

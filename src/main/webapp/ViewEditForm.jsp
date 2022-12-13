@@ -3,12 +3,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Edição do Pets</title>
+<link rel="stylesheet" type="text/css" href="./css/edit-style.css">
 </head>
 <body>
 	<%@ page import="com.petshop.dao.PetDao, com.petshop.model.Pet, java.util.*"%>
 
-	<h1> Edição de Pet</h1>
-	
+	<div id="header-area">
+          <div id="area-logo">
+              <h1>PetShop<span class="span-white">Nassau</span></h1>
+          </div>
+    </div>
 	<%		
 		String id = request.getParameter("id");
 		Pet pet = PetDao.getById(Long.parseLong(id));
