@@ -15,7 +15,7 @@
           </div>
           <div id="area-menu">
               <a href="index.html">Home</a>
-              <a href="../animais/index.html">Cadastro de Animais</a>
+              <a href="ViewPet.jsp">Cadastro de Animais</a>
           </div>
     </div>
 

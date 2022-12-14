@@ -4,9 +4,9 @@
 
 <%
 	int i = PetDao.create(pet);
-
+	
 	if(i > 0) {
-		response.sendRedirect("addPet-Sucess.jsp");
+		response.sendRedirect("ViewPet.jsp");
 	} else {
 		response.sendRedirect("addPet-error.jsp");
 	}
